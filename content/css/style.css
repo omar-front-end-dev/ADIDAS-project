@@ -25,11 +25,50 @@ body{
     align-items: center;
     justify-content: center;
 }
+body::after{
+    content: "";
+    position: absolute;
+    background-color: rgb(255, 0, 0);
+    width: 100%;
+    height: 100%;
+    clip-path: circle(40% at right 70%);
+    z-index: -1;
+}
 .container{
     width: 80%;
     height: 80%;
-    display: flex;
-    background-color: rgba(225, 225, 225, 0.052);
+    background-color: rgba(225, 225, 225, 0.1);
     border-radius: 10px;
-    padding: 20px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+}
+@media(max-width: 776px){
+    nav{
+        flex-direction: column;
+    }
+}
+.nav__logo{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+.nav__list {
+    display: flex;
+    gap: 20px;
+}
+.nav__list a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.nav__list a:hover{
+    color: #e80202;
 }
