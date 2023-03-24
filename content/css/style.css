@@ -28,7 +28,7 @@ body{
 body::after{
     content: "";
     position: absolute;
-    background-color: rgb(255, 0, 0);
+    background-color: #e80202;
     width: 100%;
     height: 100%;
     clip-path: circle(40% at right 70%);
@@ -39,6 +39,7 @@ body::after{
     height: 80%;
     background-color: rgba(225, 225, 225, 0.1);
     border-radius: 10px;
+    overflow: hidden;
 }
 nav{
     display: flex;
@@ -71,4 +72,33 @@ nav{
 }
 .nav__list a:hover{
     color: #e80202;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 90%;
+    margin: auto;
+}
+.content__text{
+    color: #fff;
+    width: 40%;
+}
+.content__text h2{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.content__text p{
+    line-height: 25px;
+    margin: 10px 0;
+}
+.content__image{
+    width: 40%;
+}
+img{
+   width: 400px;
+   
 }
