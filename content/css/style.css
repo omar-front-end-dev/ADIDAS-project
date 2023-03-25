@@ -31,8 +31,13 @@ body::after{
     background-color: #e80202;
     width: 100%;
     height: 100%;
-    clip-path: circle(40% at right 70%);
+    clip-path: circle(40% at right 80%);
     z-index: -1;
+}
+@media(max-width: 950px){
+    body::after{
+        clip-path: circle(40% at bottom);
+    }
 }
 .container{
     width: 80%;
@@ -69,6 +74,8 @@ nav{
     font-size: 18px;
     font-weight: 500;
     transition: 0.3s;
+    padding: 10px;
+    display: block;
 }
 .nav__list a:hover{
     color: #e80202;
@@ -78,27 +85,65 @@ nav{
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    width: 90%;
+    width: 80%;
     margin: auto;
+    padding: 40px 0;
+}
+@media(max-width: 950px){
+    .content{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
 }
 .content__text{
     color: #fff;
     width: 40%;
 }
+@media(max-width: 950px){
+    .content__text{
+        width: 80%;
+    }
+}
 .content__text h2{
-    font-size: 40px;
+    font-size: 2em;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 2px;
+    margin: 10px 0;
 }
 .content__text p{
+    font-size: 18px;
     line-height: 25px;
     margin: 10px 0;
+}
+@media(max-width: 768px){
+    .content__text h2{
+        font-size: 20px;
+        text-align: center;
+    }
+    .content__text p{
+        text-align: center;
+    }
 }
 .content__image{
     width: 40%;
 }
-img{
+@media(max-width: 950px){
+    .content__image{
+        width: 80%;
+        text-align: center;
+    }
+}
+.content__image img{
    width: 400px;
-   
+}
+@media (min-width: 950px) and (max-width: 1150px){
+    .content__image img{
+        width: 330px;
+    }
+}
+@media (max-width: 950px){
+    .content__image img{
+        width: 200px;
+    }
 }
